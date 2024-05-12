@@ -47,8 +47,22 @@
    <br>
 
 6. не забываем про _tunnel_
-   > в отдельной вкладке/окне консоли \
+   > в отдельной вкладке/окне консоли 
 
     ```console
     minikube tunnel
     ```
+   
+   <br>  
+ 
+7. теперь можем эмитировать нагрузку
+   ```console
+   newman run -n8000 ./postman-test/otus_microservices_hw5.postman_collection.json
+    ```
+   
+   <br>
+
+8. после получаем результат в _Grafana_ 
+    ![api metrics](./grafana/screenshots/api.png)
+    ![ingress metrics](./grafana/screenshots/ingress.png)   
+    ![pods metrics](./grafana/screenshots/pods.png)
